@@ -1,7 +1,6 @@
 import random from 'lodash/random';
+import Module from './components/module/module';
 
-const t = () => {
-	console.log('Ping!', random(99))
-};
+const module = new Module();
 
-t();
+console.log(module.name, random(42));
