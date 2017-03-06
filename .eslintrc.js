@@ -1,7 +1,12 @@
 module.exports = {
-    "extends": "airbnb",
-    "plugins": [
-        "jsx-a11y",
-        "import"
-    ],
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "plugins": [
+    "jsx-a11y",
+    "import"
+  ],
 };

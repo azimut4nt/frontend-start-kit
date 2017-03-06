@@ -1,6 +1,19 @@
-import random from 'lodash/random';
-import Module from './components/module/module';
+// import Module from './components/module/module';
 
-const module = new Module();
+let Module;
 
-console.log(module.name, random(42));
+function showModule() {
+  Module = require('./components/module/module').default;
+  const module = new Module();
+  document.body.appendChild(module.el);
+  console.log(module.name);
+}
+
+showModule();
+
+module.hot.accept('./components/module/module', () => {
+  document.body.removeChild(module.el)
+  Module = require('./components/module/module').default;
+  showModule();
+});
+
