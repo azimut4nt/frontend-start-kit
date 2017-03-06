@@ -23,6 +23,5 @@ This is my little webpack config boilerplate for frontend.
 
 ##TODO
 * add svg sprites
-* fix hot reload
 * create react and angular branches
 * fill this readme
